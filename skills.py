@@ -17,6 +17,7 @@ def all_odd(number_list):
     odd_numbers = []
     for item in number_list:
         if item % 2 != 0:
+        #modulo: if you can divide it by two but there is a remainder
             odd_numbers.append(item)
 
     return odd_numbers
@@ -35,6 +36,7 @@ def all_even(number_list):
     even_numbers = []
     for item in number_list:
         if item % 2 == 0:
+        #modulo: if you can divide it by two and there is no remainder
             even_numbers.append(item)
 
     return even_numbers
