@@ -61,8 +61,13 @@ def print_indexes(my_list):
         2 Volvo
 
     """
+    for item in my_list:
+        x = item.index(item)
 
-    print "Nothing at all"
+    #struggle notes: I tried to look up the best way to do this and saw "enumerate()", 
+    #but I think we're supposed to do this manually using what we've already learned.
+
+    print x
 
 
 def long_words(word_list):
@@ -75,8 +80,12 @@ def long_words(word_list):
         []
 
     """
+    is_more_than_four = []
+    for item in word_list:
+        if len(item) > 4:
+            is_more_than_four.append(item)
 
-    return ['the wrong thing']
+    return is_more_than_four
 
 
 def smallest_int(number_list):
