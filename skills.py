@@ -62,7 +62,7 @@ def print_indexes(my_list):
 
     """
     for item in my_list:
-        x = item.index(item)
+        x = item.index
 
     #struggle notes: I tried to look up the best way to do this and saw "enumerate()", 
     #but I think we're supposed to do this manually using what we've already learned.
@@ -107,8 +107,12 @@ def smallest_int(number_list):
         True
 
     """
+    is_smallest = []
+    for item in number_list:
+        is_smallest = sorted(number_list)
 
-    return 100
+    return is_smallest[0]
+    #returns index 0 of a numerically-sorted list
 
 
 def largest_int(number_list):
