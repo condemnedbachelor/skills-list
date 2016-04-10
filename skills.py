@@ -61,13 +61,14 @@ def print_indexes(my_list):
         2 Volvo
 
     """
-    for item in my_list:
-        x = item.index
+    #For each item in my list, I want to return its index position followed by its content.
+    for item in (my_list):
+        is_indexed = my_list.index[:]
 
     #struggle notes: I tried to look up the best way to do this and saw "enumerate()", 
     #but I think we're supposed to do this manually using what we've already learned.
 
-    print x
+    return is_indexed
 
 
 def long_words(word_list):
@@ -194,8 +195,20 @@ def sum_numbers(number_list):
         0
 
     """
-
-    return None
+    #I couldn't get this one but I'll try to explain my thinking:
+    sum = []
+    #defined a global variable to use later
+    for item in number_list:
+        # num = item in number_list
+        # This var is not necessary but this leads me to the next problem:
+        number_list[:] == item + item
+        #for each index in list, item plus item?
+        sum = number_list[:]
+        # Nothing is fixed by using item is the variable. 
+        # I'm not sure how to do this without the sum function.
+        # Trying to mult each item by each item but not sure how to iterate that 
+        # or how to refer to "the indices that are not the one we're on now"
+        return sum
 
 
 def mult_numbers(number_list):
@@ -216,8 +229,12 @@ def mult_numbers(number_list):
         1
 
     """
-
-    return None
+    #Failed this one for the same reason, same line of thinking.
+    # product = []
+    # for item in number_list:
+    #     number_list == item * item
+    #     product = number_list
+    # return product
 
 
 def join_strings(word_list):
@@ -235,8 +252,12 @@ def join_strings(word_list):
         ''
 
     """
-
-    return "Not the right thing"
+    all_strings = []
+    for item in word_list:
+        x = item.split(',')
+        word_list = all_strings.append(x)
+        return all_strings
+    return all_strings
 
 
 def average(number_list):
@@ -248,9 +269,10 @@ def average(number_list):
     There is no defined answer if the list given is empty. It's fine if
     this raises an error when given an empty list.
     """
-
-    return 0
-
+    average = []
+    for item in number_list:
+        average = float(item) + item in number_list[:]
+    return average
 
 def join_strings_with_comma(list_of_words):
     """Return ['list', 'of', 'words'] like "list, of, words".
@@ -264,9 +286,13 @@ def join_strings_with_comma(list_of_words):
         >>> join_strings_with_comma(["Pretzel"])
         'Pretzel'
 
-    """
+#     """
 
-    return ""
+    is_joined = []
+    for item in list_of_words:
+        split = list_of_words.split(",")
+        is_joined = list_of_words.append(split)
+    return is_joined
 
 
 ##############################################################################
