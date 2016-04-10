@@ -111,7 +111,10 @@ def smallest_int(number_list):
     for item in number_list:
         is_smallest = sorted(number_list)
 
-    return is_smallest[0]
+    try:
+        return is_smallest[0]
+    except IndexError:
+        return None
     #returns index 0 of a numerically-sorted list
 
 
@@ -132,9 +135,12 @@ def largest_int(number_list):
         True
 
     """
+    largest_int = []
+    for item in number_list:
+        largest_int = reversed(sorted(number_list))
 
-    return 0
-
+    return largest_int[0]
+    #returns index 0 of a reverse-numerically-sorted list
 
 def halvesies(number_list):
     """Return list of numbers from input list, each divided by two.
