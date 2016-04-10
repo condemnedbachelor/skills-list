@@ -137,7 +137,7 @@ def largest_int(number_list):
     """
     is_largest = []
     for item in number_list:
-        is_largest = reversed(sorted(number_list))
+        is_largest = (reversed(sorted(number_list)))
 
     try:
         return is_largest[0]
