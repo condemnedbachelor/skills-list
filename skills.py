@@ -174,8 +174,10 @@ def word_lengths(word_list):
 
     """
 
-    return []
-
+    length = []
+    word_list[:] = [len(item) for item in word_list]
+    length = word_list
+    return length
 
 def sum_numbers(number_list):
     """Return the sum of all of the numbers in the list.
