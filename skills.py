@@ -68,6 +68,10 @@ def print_indexes(my_list):
     #struggle notes: I tried to look up the best way to do this and saw "enumerate()", 
     #but I think we're supposed to do this manually using what we've already learned.
 
+    #At this point I've tried so many things. I foolishly left my notes in
+    #our space and I can't seem to find more info in our lecture notes
+    #on this particular scenario.
+
     return is_indexed
 
 
@@ -229,7 +233,8 @@ def mult_numbers(number_list):
         1
 
     """
-    #Failed this one for the same reason, same line of thinking.
+    # Failed this one for the same reason, same line of thinking. Commenting out my 
+    # attempt so you can see it without breaking terminal.
     # product = []
     # for item in number_list:
     #     number_list == item * item
@@ -252,11 +257,17 @@ def join_strings(word_list):
         ''
 
     """
+    #Defined a thus far empty list.
     all_strings = []
     for item in word_list:
+        # Tried to split the items by comma to append them together
         x = item.split(',')
-        word_list = all_strings.append(x)
+        # This is where I tried to append them, which failed.
+        all_strings = word_list.append(x)
+        # Tried to attach it to my original empty list for returning.
         return all_strings
+        # Sometimes I could get it to return "spam" once or twice, but never all objects
+        # as one word. :( I can not figure out how to make this one work.
     return all_strings
 
 
@@ -270,8 +281,18 @@ def average(number_list):
     this raises an error when given an empty list.
     """
     average = []
+    total = []
+    # defining average and total as empty lists globally to use inside for loop
     for item in number_list:
-        average = float(item) + item in number_list[:]
+        # Changed items to floats in case of decimals
+        # Tried to add all items together to divide by the amount of them.
+        total = float(item) + float(item) in number_list[:] 
+        # I want total to equal the float of the sum of two items for each index in
+        # number_list. I know this is wrong because the join one was also wrong.
+        size = len(total)
+        # Size equals the length of the new total list above
+        average = total / size
+        # average equals total sum divided by size of list
     return average
 
 def join_strings_with_comma(list_of_words):
@@ -287,7 +308,7 @@ def join_strings_with_comma(list_of_words):
         'Pretzel'
 
 #     """
-
+# I had the same problem as the first join exercise.
     is_joined = []
     for item in list_of_words:
         split = list_of_words.split(",")
