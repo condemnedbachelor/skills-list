@@ -158,8 +158,12 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
-
-    return []
+    is_halved = []
+    number_list[:] = [float(item) / 2 for item in number_list]
+    # for each item in number_list, convert item to float, divide by 2, iterate.
+    is_halved = number_list
+    # this may be unnecessary but I like having a special var for this function
+    return is_halved
 
 
 def word_lengths(word_list):
