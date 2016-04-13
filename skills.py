@@ -21,7 +21,7 @@ def all_odd(number_list):
             odd_numbers.append(item)
 
     return odd_numbers
-
+# Solution: return [d for d in number_list if d % 2 != 0]
 
 def all_even(number_list):
     """Return a list of only the even numbers in the input list.
@@ -40,7 +40,7 @@ def all_even(number_list):
             even_numbers.append(item)
 
     return even_numbers
-
+# Solution: return [d for d in number_list if d % 2 == 0]
 
 def print_indexes(my_list):
     """Print the index of each item in the input_list, followed by the item itself.
@@ -74,6 +74,12 @@ def print_indexes(my_list):
 
     return is_indexed
 
+    # Solution: 
+    # for i in range(len(my_list)):
+    #     print i, my_list[i]
+    # Or: 
+    # for i, vehicle in enumerate(my_list):
+    #     print i, vehicle
 
 def long_words(word_list):
     """Return all words in input list that are longer than 4 characters.
@@ -91,6 +97,8 @@ def long_words(word_list):
             is_more_than_four.append(item)
 
     return is_more_than_four
+    # Solution: 
+    # return [w for w in word_list if len(w) > 4]
 
 
 def smallest_int(number_list):
@@ -121,6 +129,13 @@ def smallest_int(number_list):
     except IndexError:
         return None
     #returns index 0 of a numerically-sorted list
+
+    # Solution: 
+    # smallest = None
+    # for item in number_list:
+    #     if smallest is None or item < smallest:
+    #          smallest = item
+    # return smallest
 
 
 def largest_int(number_list):
@@ -213,6 +228,12 @@ def sum_numbers(number_list):
         # Trying to mult each item by each item but not sure how to iterate that 
         # or how to refer to "the indices that are not the one we're on now"
         return sum
+# Solution: 
+# total = 0
+# for i in number_list:
+#     total = total + i
+
+# return total
 
 
 def mult_numbers(number_list):
@@ -240,6 +261,13 @@ def mult_numbers(number_list):
     #     number_list == item * item
     #     product = number_list
     # return product
+
+# Solution:
+# product = 1 < because mult by 1 is the same as adding zero
+# for i in number_list:
+#     product = product * i
+
+# return product
 
 
 def join_strings(word_list):
@@ -269,7 +297,13 @@ def join_strings(word_list):
         # Sometimes I could get it to return "spam" once or twice, but never all objects
         # as one word. :( I can not figure out how to make this one work.
     return all_strings
+# Solution:
+# result = "" < because you're dealing with strings, but this works same as sum
 
+# for s in word_list:
+#     result = result + s
+
+# return result
 
 def average(number_list):
     """Return the average (mean) of the list of numbers given.
@@ -295,6 +329,10 @@ def average(number_list):
         # average equals total sum divided by size of list
     return average
 
+# Solution:
+# total = sum_numbers(number_list)
+# return total / float(len(number_list))
+
 def join_strings_with_comma(list_of_words):
     """Return ['list', 'of', 'words'] like "list, of, words".
 
@@ -314,6 +352,10 @@ def join_strings_with_comma(list_of_words):
         split = list_of_words.split(",")
         is_joined = list_of_words.append(split)
     return is_joined
+
+# Solution:
+# return ", ".join(list_of_words)
+
 
 
 ##############################################################################
